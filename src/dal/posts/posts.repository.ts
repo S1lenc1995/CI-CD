@@ -16,8 +16,6 @@ export class PostsRepository {
     }
     async getAllPosts(params: Params): Promise<PagedPosts> {
         const queryBuilder = this.manager.createQueryBuilder("post", "p");
-        let a = 0
-        let b = 1
         let result = await queryBuilder
             .innerJoinAndSelect("p.author", "a")
             .getMany();
