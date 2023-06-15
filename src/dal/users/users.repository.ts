@@ -13,7 +13,7 @@ import { AppDataSource } from "../../dal/appDataSource";
 class UsersRepository {
   manager;
   constructor() {
-    this.manager = getManager()
+    this.manager =AppDataSource.manager
   }
   async getByEmail(email: string) {
     const res = await this.manager.findOne(UserEntity, { where: { email: email } });

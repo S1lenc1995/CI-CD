@@ -8,11 +8,11 @@ import { createConnection } from "typeorm";
 import { UserBuilder } from "./bll/notificationService/builder/userBuilder";
 import { AppDataSource } from "./dal/appDataSource";
 
+
  
 
 
-createConnection().then( async() => {
-  AppDataSource.initialize()
+AppDataSource.initialize().then( async() => {
   const app = new App(
     [Container.get(PostsController), Container.get(AuthController)],
     3000

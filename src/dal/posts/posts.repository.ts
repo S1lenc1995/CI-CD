@@ -4,6 +4,7 @@ import Params from "../../types/params.interface";
 import { PagedPosts, Post } from "../../types/posts.interface";
 import { PostEntity } from "../entity/post";
 import { getManager } from "typeorm";
+import { AppDataSource } from "../../dal/appDataSource";
 
 
 
@@ -11,7 +12,7 @@ import { getManager } from "typeorm";
 export class PostsRepository {
     manager;
     constructor() {
-        this.manager = getManager()
+        this.manager = AppDataSource.manager
     }
     async getAllPosts(params: Params): Promise<PagedPosts> {
         const queryBuilder = this.manager.createQueryBuilder("post", "p");

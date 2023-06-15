@@ -13,8 +13,8 @@ export const AppDataSource = new DataSource({
     entities: [UserEntity, PostEntity],
     synchronize: true,
     logging: false,
-    migrations: [],
-    /* seeds:[], */
+    migrations: ["build/dal/migrations/*.js"],
+    /* seeds:[],  */
 })
 
 
