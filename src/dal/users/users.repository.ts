@@ -1,10 +1,8 @@
 import { Service } from "typedi";
-import { postsRegister } from "../../registerShema/postsRegisterShema";
 import Params from "../../types/params.interface";
 import { PagedPosts, Post } from "../../types/posts.interface";
 import  {PostEntity}  from "../entity/post";
 import { getManager } from "typeorm";
-import { usersRegister } from "../../registerShema/usersRegisterShema";
 import  {UserEntity}  from "../entity/user";
 import { AppDataSource } from "../../dal/appDataSource";
 

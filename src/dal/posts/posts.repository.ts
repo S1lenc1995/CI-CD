@@ -1,5 +1,4 @@
 import { Service } from "typedi";
-import { postsRegister } from "../../registerShema/postsRegisterShema";
 import Params from "../../types/params.interface";
 import { PagedPosts, Post } from "../../types/posts.interface";
 import { PostEntity } from "../entity/post";
