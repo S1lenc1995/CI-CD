@@ -15,8 +15,6 @@ export class PostsRepository {
         this.manager = AppDataSource.manager
     }
     async getAllPosts(params: Params): Promise<PagedPosts> {
-        let a =1
-        let b =2
         const queryBuilder = this.manager.createQueryBuilder("post", "p");
         let result = await queryBuilder
             .innerJoinAndSelect("p.author", "a")
@@ -35,7 +33,7 @@ export class PostsRepository {
     }
     async getById(_id: number) {
         const queryBuilder = this.manager.createQueryBuilder("post", "p");
-        let result = await queryBuilder
+        const result = await queryBuilder
             .innerJoinAndSelect("p.author", "a")
             .where("p.id = :id", { id: _id })
             .getOne();

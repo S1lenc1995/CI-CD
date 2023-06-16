@@ -103,7 +103,7 @@ class AuthController {
       password: encryptedPassword,
     }
   
-    let user = await this.usersService.createdNewUser(newUser);
+    const user = await this.usersService.createdNewUser(newUser);
 
     const token = jwt.sign({ user_id: user.id, email }, this.privateKey, {
       expiresIn: "2h",

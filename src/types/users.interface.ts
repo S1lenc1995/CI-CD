@@ -11,8 +11,8 @@ export interface RequestUser {
 }
 
 export interface NewUser {
-  email: String,
+  email: string,
   id?: number,
   createDate?: Date;
-  password: String, 
+  password: string, 
 }
