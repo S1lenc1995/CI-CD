@@ -4,7 +4,7 @@ import { Request, Response, NextFunction } from "express";
 
 // Init transports
 const consoleTransport = new winston.transports.Console();
-const applicationTransport = new DailyRotateFile({
+/* const applicationTransport = new DailyRotateFile({
     filename: "application-%DATE%.log",
     datePattern: "YYYY-MM-DD",
     zippedArchive: true,
@@ -16,7 +16,7 @@ const applicationTransport = new DailyRotateFile({
     zippedArchive: true,
     maxSize: "1m",
     level: "error",
-  });
+  }); */
 
 //formatter
 const { combine, timestamp, label, printf } = winston.format;
