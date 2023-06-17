@@ -2,13 +2,13 @@
   "name": "express",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "eslint": "eslint ./src",
     "dev": "npx nodemon",
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && node build/index.js",
+    "start": "node build/index.js",
     "db:seed": "ts-node ./src/dal/seed",
     "db:migrate-up": "ts-node ./node_modules/typeorm/cli.js migration:run -d ./src/dataSource.ts",
     "db:migrate-down": "ts-node ./node_modules/typeorm/cli.js migration:revert -d ./src/dataSource.ts"
