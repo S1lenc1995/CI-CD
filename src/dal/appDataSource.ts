@@ -5,11 +5,7 @@ import { PostEntity } from "./entity/post"
 
 export const AppDataSource = new DataSource({
     type: "postgres",
-    host: "localhost",
-    port: 5432,
-    username: "postgres",
-    password: "underwater",
-    database: "newDB",
+    url: "postgres://twcfnlcu:wKNKUwuZcCQkBzFgWb_bIjlotTqVf6Vw@snuffleupagus.db.elephantsql.com/twcfnlcu",
     entities: [UserEntity, PostEntity],
     synchronize: true,
     logging: false,
