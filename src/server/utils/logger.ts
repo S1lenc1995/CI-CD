@@ -28,7 +28,7 @@ const myFormat = printf(({ level, message, label, timestamp }) => {
 
 const myWinstonOptions = {
   format: combine(timestamp(), myFormat),
-  transports: [consoleTransport, applicationTransport, errorTransport],
+  transports: [consoleTransport /* applicationTransport, errorTransport */],
 };
 const logger = winston.createLogger(myWinstonOptions);
 
