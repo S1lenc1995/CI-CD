@@ -1,0 +1,12 @@
+2023-06-20T20:01:42.893Z info: GET:/api/posts
+2023-06-20T20:01:42.898Z error: invalid token
+2023-06-20T20:01:46.416Z info: GET:/api/posts
+2023-06-20T20:01:46.417Z error: invalid token
+2023-06-20T20:02:04.934Z info: POST:/auth/login
+2023-06-20T20:02:06.170Z info: GET:/api/posts
+2023-06-20T20:02:16.140Z info: GET:/api/post/4
+2023-06-20T20:02:24.307Z info: GET:/api/posts
+2023-06-20T20:02:29.810Z info: POST:/api/createNewPost
+2023-06-20T20:02:29.812Z info: {"title":"a","content":"a","genre":"Business","isPrivate":true}
+2023-06-20T20:02:29.821Z error: Connection "default" was not found.
+2023-06-20T20:02:29.822Z error: Connection "default" was not found.

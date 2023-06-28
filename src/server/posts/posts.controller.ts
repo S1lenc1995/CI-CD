@@ -43,7 +43,7 @@ class PostsController {
                 page: request.query.page ? Number(request.query.page) : null,
                 filter: request.query.filter || {},
             };
-            console.log('1111111')
+            console.log('1')
             const pagedPosts = await this.postsService.getAllPosts(params);
             response.send(pagedPosts);
 
